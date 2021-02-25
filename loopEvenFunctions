@@ -1,0 +1,55 @@
+#include<iostream>
+int forLoop(int);
+int whileLoop(int);
+int doWhileLoop(int);
+using namespace std;
+int main(){
+	int inp;
+	int b = 0;
+	cout<<"Which loop you want to execuate with: 1-For-loop, 2-While-loop, 3-Do while-loop:- ";
+	cin>>inp;
+	if(inp == 1){
+		forLoop(b);	
+	}else if(inp == 2){
+		whileLoop(b);
+	}else if(inp == 3){
+		doWhileLoop(b);
+	}else
+	cout<<"Sorry.. you entred a worong option.";
+	return 0;
+}
+
+forLoop(int a){
+	cout<<"\n \n The even Numbers are= \n";
+	a = 0; // reseting the b value to zero.
+	for(a; a <= 100; a++){
+	if(a % 2 == 0){
+	cout<<a<<"\t";
+		}
+	}
+	cout<<"\n \n This is an excuation of FOR loop..";
+}
+
+whileLoop(int t){
+	cout<<"\n \n The even Numbers are= \n";
+	t = 0;// reseting the b value to zero.
+	while(t <= 100){
+		if(t % 2 == 0){
+			cout<<t<<"\t";
+		}
+		t++;
+	}
+	cout<<"\n \n This is an excuation of WHILE loop..";
+	
+}
+
+doWhileLoop(int a){
+	cout<<"\n \n The even Numbers are= \n";
+	// do while loop
+	do{
+		(a % 2 == 0) ? cout<<a : cout<<"\t";
+		a++;
+		
+	}while(a <= 100);
+	cout<<"\n \n This is an excuation of DO-WHILE loop..";
+}
